@@ -1,3 +1,27 @@
+/* ===== RESET & BASE ===== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -6,18 +30,74 @@ body {
   background-color: #ffffff;
 }
 
+/* ===== LAYOUT ===== */
+
+.container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding: 120px 0;
+}
+
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo-web {
+  margin-right: 76px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+.contact-info {
+  margin-left: auto;
+  font-style: normal;
+}
+
+.contact-list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link,
+.contact-link {
+  padding: 24px 0;
+  display: block;
+}
 /* Header */
 
 .header {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .logo-web {
@@ -91,31 +171,33 @@ ul {
 }
 
 .hero {
-  background: #2e2f42;
+  background-color: #2e2f42;
+  padding: 188px 0;
+  text-align: center;
 }
 
 .hero-title {
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 56px;
-  line-height: 1.07143;
-  letter-spacing: 0.02em;
   line-height: 1.07;
-  text-align: center;
+  letter-spacing: 0.02em;
   color: #ffffff;
+  margin-bottom: 43px;
 }
 
 .hero-button {
-  cursor: pointer;
-  background-color: #4d5ae5;
-}
-
-.hero-button {
+  padding: 16px 32px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .hero-button:hover,
@@ -123,14 +205,17 @@ ul {
   background-color: #404bbf;
 }
 
-.section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  text-transform: capitalize;
-  color: #2e2f42;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .advantages-title {
@@ -192,6 +277,10 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+}
+
+.portfolio-item {
+  border-bottom: 1px solid #e7e9fc;
 }
 
 /* Footer */
